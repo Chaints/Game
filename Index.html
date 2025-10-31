@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>BloxFruit 2D — Split Version</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="game-wrap">
+    <canvas id="gameCanvas"></canvas>
+
+    <!-- HUD -->
+    <div id="hud">
+      <div class="hud-item"><div class="hud-label">HP</div><div id="hpValue" class="hud-value">0/0</div></div>
+      <div class="hud-item"><div class="hud-label">Coins</div><div id="coinValue" class="hud-value">0</div></div>
+      <div class="hud-item"><div class="hud-label">Wave</div><div id="waveValue" class="hud-value">1</div></div>
+    </div>
+
+    <!-- minimap -->
+    <div id="minimap"><canvas id="miniCanvas" width="120" height="120"></canvas></div>
+
+    <!-- dpad circle -->
+    <div id="dpadCircle" aria-hidden="false">
+      <div id="dpadInner">
+        <div class="dpad-sector dpad-up" id="dpadUp">▲</div>
+        <div class="dpad-sector dpad-left" id="dpadLeft">◀</div>
+        <div class="dpad-sector dpad-right" id="dpadRight">▶</div>
+        <div class="dpad-sector dpad-down" id="dpadDown">▼</div>
+      </div>
+    </div>
+
+    <!-- actions -->
+    <div class="actions">
+      <button id="attackBtn" class="act-btn">⚔️</button>
+      <button id="skill1Btn" class="act-btn disabled">1</button>
+      <button id="skill2Btn" class="act-btn disabled">2</button>
+      <button id="skill3Btn" class="act-btn disabled">3</button>
+      <button id="healBtn" class="act-btn">❤️</button>
+      <button id="gachaBtn" class="act-btn">🎰</button>
+    </div>
+
+    <!-- rotate control -->
+    <button id="rotateBtn" title="Switch Mode" class="rotate-btn">🔄</button>
+
+    <div id="bossBar"><div id="bossBarInner"></div></div>
+    <div id="centerMsg"></div>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
